@@ -1,6 +1,6 @@
 {
   // A friendly name you’ll see in VS Code
-  "name": "Palace DevContainer",
+  "name": "Python + React DevContainer",
 
   // Location of Dockerfile
   "build": {
