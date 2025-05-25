@@ -1,0 +1,16 @@
+{
+  // A friendly name you’ll see in VS Code
+  "name": "React DevContainer",
+
+  // Location of Dockerfile
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "runArgs": ["--init", "-v", "${env:HOME}/.ssh:/root/.ssh"],
+  "remoteUser": "root",
+
+  "appPort": [3000],
+
+  "postStartCommand": ".devcontainer/postStart.sh"
+}
