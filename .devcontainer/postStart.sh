@@ -13,6 +13,4 @@ gh auth status
 # Set the Git remote URL
 git remote set-url origin https://github.com/llama887/palace.git
 
-uv tool install --force --python python3.12 aider-chat@latest
-uv tool update-shell
 

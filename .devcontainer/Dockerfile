@@ -49,6 +49,12 @@ COPY requirements.txt /tmp/requirements.txt
 RUN pip install --upgrade pip && \
     uv pip install --system -r /tmp/requirements.txt
 
+# Install aider-chat using uv
+RUN uv tool install --force --python python3.12 aider-chat@latest
+
+# Ensure /root/.local/bin is in PATH for subsequent RUN/CMD/ENTRYPOINT
+ENV PATH="/root/.local/bin:$PATH"
+
 # 6. Copy the rest of your app
 COPY . .
 
