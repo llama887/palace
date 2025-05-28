@@ -12,5 +12,54 @@
 
   "appPort": [3000],
 
-  "postStartCommand": ".devcontainer/postStart.sh"
+  "postStartCommand": ".devcontainer/postStart.sh",
+
+  "customizations": {
+        "vscode": {
+            "extensions": [
+                "charliermarsh.ruff",
+                "codezombiech.gitignore",
+                "kevinrose.vsc-python-indent",
+                "ms-azuretools.vscode-docker",
+                "ms-python.python",
+                "njpwerner.autodocstring",
+                "oderwat.indent-rainbow",
+                "shardulm94.trailing-spaces",
+                "usernamehw.errorlens",
+                "yzhang.markdown-all-in-one",
+                "aaron-bond.better-comments",
+                "cardinal90.multi-cursor-case-preserve",
+                "shd101wyy.markdown-preview-enhanced",
+				"pkief.material-icon-theme",
+				"jeff-hykin.polacode-2019",
+				"streetsidesoftware.code-spell-checker",
+				"tomoki1207.pdf",
+                "deepsourcecorp.deepsource-vscode",
+                "coderabbit.coderabbit-vscode"
+            ],
+            "settings": {
+                "[python]": {
+                    "editor.defaultFormatter": "charliermarsh.ruff",
+                    "editor.codeActionsOnSave": {
+                        "source.fixAll.ruff": "explicit",
+                        "source.organizeImports.ruff": "explicit"
+                    },
+                    "editor.formatOnSave": true
+                },
+                "files.insertFinalNewline": true,
+                "files.trimTrailingWhitespace": true
+            },
+            "python.analysis.inlayHints.callArgumentNames": "all",
+            "python.analysis.inlayHints.functionReturnTypes": true,
+            "python.analysis.inlayHints.variableTypes": true,
+            "python.analysis.typeCheckingMode": "strict",
+            "python.analysis.typeEvaluation.strictDictionaryInference": true,
+            "python.analysis.typeEvaluation.strictListInference": true,
+            "python.analysis.typeEvaluation.strictSetInference": true,
+            "python.analysis.typeEvaluation.strictTupleInference": true,
+            "python.analysis.typeEvaluation.strictParameterInference": true,
+            "python.analysis.typeEvaluation.strictReturnInference": true,
+            "python.analysis.typeEvaluation.strictAttributeInference": true
+        }
+    }
 }

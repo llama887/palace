@@ -1,1 +1,2 @@
-django
+fastapi==0.115.12
+openai==1.82.0
